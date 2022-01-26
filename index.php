@@ -18,11 +18,15 @@
 	//define connection to Twitter API
 	require_once('TwitterAPIExchange.php');
 	/** Set access tokens here - see: https://dev.twitter.com/apps/ **/
+	$OAUTH_ACCESS_TOKEN = getenv('PLACE_OAUTH_ACCESS_TOKEN');
+	$OAUTH_ACCESS_TOKEN_SECRET = getenv('PLACE_OAUTH_ACCESS_TOKEN_SECRET');
+	$CONSUMER_TOKEN = getenv('PLACE_CONSUMER_TOKEN');
+	$CONSUMER_TOKEN_SECRET = getenv('PLACE_CONSUMER_TOKEN_SECRET');
 	$settings = array(
-		'oauth_access_token' => "PLACE OAUTH ACCESS TOKEN HERE",
-		'oauth_access_token_secret' => "PLACE OAUTH ACCESS TOKEN SECRET HERE",
-		'consumer_key' => "PLACE CONSUMER KEY HERE",
-		'consumer_secret' => "PLACE CONSUMER SECRET HERE"
+		'oauth_access_token' => "$OAUTH_ACCESS_TOKEN",
+		'oauth_access_token_secret' => "$OAUTH_ACCESS_TOKEN_SECRET",
+		'consumer_key' => "$CONSUMER_TOKEN",
+		'consumer_secret' => "$CONSUMER_TOKEN_SECRET"
 	);
 	$url = "https://api.twitter.com/1.1/search/tweets.json";
 	$requestMethod = "GET";
@@ -70,6 +74,7 @@
 	}
 	//display the button to get a new random tweet
 	echo "<button type='button' class='btn btn-primary' onClick='window.location.reload()'>Another Tweet</button>";
+	echo $CONSUMER_TOKEN_SECRET;
 	?>
 </body>
 </html>
