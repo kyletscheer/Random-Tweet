@@ -23,8 +23,6 @@
 	$OAUTH_ACCESS_TOKEN_SECRET = getenv('PLACE_OAUTH_ACCESS_TOKEN_SECRET');
 	$CONSUMER_TOKEN = getenv('PLACE_CONSUMER_TOKEN');
 	$CONSUMER_TOKEN_SECRET = getenv('PLACE_CONSUMER_TOKEN_SECRET');
-	echo $CONSUMER_TOKEN_SECRET;
-	echo "jesus";
 	$settings = array(
 		'oauth_access_token' => "$OAUTH_ACCESS_TOKEN",
 		'oauth_access_token_secret' => "$OAUTH_ACCESS_TOKEN_SECRET",
@@ -77,7 +75,6 @@
 	}
 	//display the button to get a new random tweet
 	echo "<button type='button' class='btn btn-primary' onClick='window.location.reload()'>Another Tweet</button>";
-	echo $CONSUMER_TOKEN_SECRET;
 	?>
 </body>
 </html>
