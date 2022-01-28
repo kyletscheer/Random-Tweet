@@ -76,6 +76,6 @@
 	//display the button to get a new random tweet
 	echo "<button type='button' class='btn btn-primary' onClick='window.location.reload()'>Another Tweet</button>";
 	?>
-<br><br><br><br><a href="https://get-random-tweet.herokuapp.com/index.php" target="_blank">How this was made.</a>
+<br><br><br><br><a href="https://kyletscheer.medium.com/getting-a-random-tweet-using-the-twitter-search-api-and-php-c7546c8fa080" target="_blank">How this was made.</a>
 </body>
 </html>
