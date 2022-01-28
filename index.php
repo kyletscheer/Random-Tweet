@@ -1,5 +1,6 @@
 <html>
 <head>
+	<title>Get a Random Tweet</title>
 </head>
 <body>
   <form action='index.php' method='post'>
