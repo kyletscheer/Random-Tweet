@@ -1,5 +1,6 @@
 <html>
 <head>
+	<title>Get a Random Tweet</title>
 </head>
 <body>
   <form action='index.php' method='post'>
@@ -74,7 +75,7 @@
 	}
 	//display the button to get a new random tweet
 	echo "<button type='button' class='btn btn-primary' onClick='window.location.reload()'>Another Tweet</button>";
-	echo $CONSUMER_TOKEN_SECRET;
 	?>
+<br><br><br><br><a href="https://kyletscheer.medium.com/getting-a-random-tweet-using-the-twitter-search-api-and-php-c7546c8fa080" target="_blank">How this was made.</a>
 </body>
 </html>
