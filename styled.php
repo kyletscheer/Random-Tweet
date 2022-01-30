@@ -71,7 +71,7 @@
 		echo "<b>Following: </b>". $friends ."<br />";
 		echo "<b>Listed: </b>". $listed ."<br /><hr />";
 		$i++;
-		if($i == 10) break;
+		if($i == 2) break;
 	}
 	//display the button to get a new random tweet
 	echo "<button type='button' class='btn btn-primary' onClick='window.location.reload()'>Another Tweet</button>";
