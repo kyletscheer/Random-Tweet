@@ -76,7 +76,6 @@
 	}
 	//display the button to get a new random tweet
 	echo "<button type='button' class='btn btn-primary' onClick='window.location.reload()'>Another Tweet</button>";
-	echo $CONSUMER_TOKEN_SECRET;
 	?>
 </body>
 </html>
