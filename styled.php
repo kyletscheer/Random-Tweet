@@ -59,7 +59,6 @@
 		$followers = $tweets['user']['followers_count'];
 		$friends = $tweets['user']['friends_count'];
 		$listed = $tweets['user']['listed_count'];
-		echo "https://publish.twitter.com/oembed?url=". $url;
 		echo "<b>Time and Date of Tweet: </b>" . $time ."<br />";
 		echo "<b>ID of Tweet: </b>" . $id . "<br />";
 		echo "<b>Source of Tweet: </b>" . $source . "<br />";
