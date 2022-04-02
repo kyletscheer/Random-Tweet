@@ -71,7 +71,7 @@
 		echo "<b>Followers: </b>". $followers ."<br />";
 		echo "<b>Following: </b>". $friends ."<br />";
 		echo "<b>Listed: </b>". $listed ."<br /><hr />";
-		echo "<blockquote class='twitter-tweet'><a href='https://twitter.com/" . $user . "/statuses/" . $id . "></a>jesus</blockquote>";
+		echo "<blockquote class='twitter-tweet'><a href='https://twitter.com/" . $user . "/statuses/" . $id . "'></a>jesus</blockquote>";
 		$i++;
 		if($i == 2) break;
 	}
