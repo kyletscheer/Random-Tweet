@@ -1,6 +1,7 @@
 <html>
 <head>
 	<title>Get a Random Tweet</title>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </head>
 <body>
   <form action='index.php' method='post'>
@@ -73,6 +74,11 @@
 		$i++;
 		if($i == 2) break;
 	}
+	?>
+	<blockquote class="twitter-tweet">
+		<a href="https://twitter.com/<?php echo $user . "/status/" . $id;?>"></a> 
+	</blockquote>
+	<?php
 	//display the button to get a new random tweet
 	echo "<button type='button' class='btn btn-primary' onClick='window.location.reload()'>Another Tweet</button>";
 	?>
