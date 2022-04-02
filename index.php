@@ -1,7 +1,6 @@
 <html>
 <head>
 	<title>Get a Random Tweet</title>
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 </head>
 <body>
   <form action='index.php' method='post'>
@@ -82,5 +81,7 @@
 	?>
 	<blockquote class="twitter-tweet"><p>NoSQL space gradually becoming SlowSQL space.</p>&mdash; Big Data Borat (@BigDataBorat) <a href="https://twitter.com/BigDataBorat/statuses/349216251853287425">June 24, 2013</a></blockquote>
 <br><br><br><br><a href="https://kyletscheer.medium.com/getting-a-random-tweet-using-the-twitter-search-api-and-php-c7546c8fa080" target="_blank">How this was made.</a>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
 </body>
 </html>
