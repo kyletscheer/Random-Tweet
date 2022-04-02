@@ -7,7 +7,7 @@
   Keyword: <input type="text" name="keyword">
   <input type="submit">
   </form>
-  <a href="javascript:;" onmousedown="toggleDiv('mydiv');">Toggle Between Tweet Style Or Raw Data</a>
+  <button type="button"><a href="javascript:;" onmousedown="toggleDiv('mydiv');">Toggle Between Tweet Style Or Raw Data</a></button>
 
   <?
 	//check if keyword input has been filled out. If not, set to "random
