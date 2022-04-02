@@ -71,7 +71,7 @@
 		echo "<b>Followers: </b>". $followers ."<br />";
 		echo "<b>Following: </b>". $friends ."<br />";
 		echo "<b>Listed: </b>". $listed ."<br /><hr />";
-		echo "<blockquote class='twitter-tweet'><a href='https://twitter.com/" . $user . "/status/" . $id . "></a></blockquote>";
+		echo "<blockquote class='twitter-tweet'><a href='https://twitter.com/" . $user . "/statuses/" . $id . "></a>jesus</blockquote>";
 		$i++;
 		if($i == 2) break;
 	}
@@ -80,6 +80,7 @@
 	//display the button to get a new random tweet
 	echo "<button type='button' class='btn btn-primary' onClick='window.location.reload()'>Another Tweet</button>";
 	?>
+	<blockquote class="twitter-tweet"><p>NoSQL space gradually becoming SlowSQL space.</p>&mdash; Big Data Borat (@BigDataBorat) <a href="https://twitter.com/BigDataBorat/statuses/349216251853287425">June 24, 2013</a></blockquote>
 <br><br><br><br><a href="https://kyletscheer.medium.com/getting-a-random-tweet-using-the-twitter-search-api-and-php-c7546c8fa080" target="_blank">How this was made.</a>
 </body>
 </html>
