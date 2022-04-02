@@ -73,11 +73,11 @@
 		echo "<b>Listed: </b>". $listed ."<br /><hr />";
 		$i++;
 		if($i == 2) break;
-	}
-	?>
-	<blockquote class="twitter-tweet">
+		<blockquote class="twitter-tweet">
 		<a href="https://twitter.com/<?php echo $user . "/status/" . $id;?>"></a> 
 	</blockquote>
+	}
+	?>
 	<?php
 	//display the button to get a new random tweet
 	echo "<button type='button' class='btn btn-primary' onClick='window.location.reload()'>Another Tweet</button>";
