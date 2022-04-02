@@ -51,7 +51,7 @@
 	$i = 1;
 	//print out the tweet information
 	foreach($string['statuses'] as $tweets) {
-		echo "<div id='mydivraw' style="display:block'>";
+		echo "<div id='mydivraw' style='display:block'>";
 		$time = $tweets['created_at'];
 		$id = $tweets['id'];
 		$source = $tweets['source'];
