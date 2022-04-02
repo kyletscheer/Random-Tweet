@@ -51,7 +51,7 @@
 	$i = 1;
 	//print out the tweet information
 	foreach($string['statuses'] as $tweets) {
-		echo "<div id='mydivraw' style='display:block'>";
+		echo "<div id='mydivraw' style='display:none'>";
 		$time = $tweets['created_at'];
 		$id = $tweets['id'];
 		$source = $tweets['source'];
@@ -74,7 +74,7 @@
 		echo "<b>Following: </b>". $friends ."<br />";
 		echo "<b>Listed: </b>". $listed ."<br /><hr />";
 		echo "</div>";
-		echo "<div id='mydivstylized' style='display:none'>";
+		echo "<div id='mydivstylized' style='display:block'>";
 		echo "<blockquote class=\"twitter-tweet\"><a href=\"https://twitter.com/" . $user . "/statuses/" . $id . "\"></a></blockquote>";
 		echo "</div>";
 		$i++;
