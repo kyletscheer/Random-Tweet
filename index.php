@@ -75,7 +75,7 @@
 		echo "<b>Listed: </b>". $listed ."<br /><hr />";
 		echo "</div>";
 		echo "<div id='mydivstylized' style='display:none'>";
-		echo "<blockquote class='twitter-tweet'><a href=\"https://twitter.com/" . $user . "/statuses/" . $id . "\"></a></blockquote>";
+		echo "<blockquote class=\"twitter-tweet\"><a href=\"https://twitter.com/" . $user . "/statuses/" . $id . "\"></a></blockquote>";
 		echo "</div>";
 		$i++;
 		if($i == 2) break;  
