@@ -7,6 +7,8 @@
   Keyword: <input type="text" name="keyword">
   <input type="submit">
   </form>
+  <a href="javascript:;" onmousedown="toggleDiv('mydiv');">Toggle Between Tweet Style Or Raw Data</a>
+
   <?
 	//check if keyword input has been filled out. If not, set to "random
 	if (!empty($_POST["keyword"])){
@@ -49,6 +51,7 @@
 	$i = 1;
 	//print out the tweet information
 	foreach($string['statuses'] as $tweets) {
+		echo "<div id='mydivraw' style="display:block'>";
 		$time = $tweets['created_at'];
 		$id = $tweets['id'];
 		$source = $tweets['source'];
@@ -70,9 +73,12 @@
 		echo "<b>Followers: </b>". $followers ."<br />";
 		echo "<b>Following: </b>". $friends ."<br />";
 		echo "<b>Listed: </b>". $listed ."<br /><hr />";
-		echo "<blockquote class='twitter-tweet'><a href='https://twitter.com/" . $user . "/statuses/" . $id . "'></a></blockquote>";
+		echo "</div>";
+		echo "<div id='mydivstylized' style='display:none'>";
+		echo "<blockquote class='twitter-tweet'><a href=\"https://twitter.com/" . $user . "/statuses/" . $id . "\"></a></blockquote>";
+		echo "</div>";
 		$i++;
-		if($i == 2) break;
+		if($i == 2) break;  
 	}
 	?>
 	<?php
@@ -81,6 +87,25 @@
 	?>
 	<br><br><br><br><a href="https://kyletscheer.medium.com/getting-a-random-tweet-using-the-twitter-search-api-and-php-c7546c8fa080" target="_blank">How this was made.</a>
 	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
-
+	<script>
+function toggleDiv(divid)
+  {
+ 
+    varon = divid + 'raw';
+    varoff = divid + 'stylized';
+ 
+    if(document.getElementById(varon).style.display == 'block')
+    {
+    document.getElementById(varon).style.display = 'none';
+    document.getElementById(varoff).style.display = 'block';
+    }
+   
+    else
+    {  
+    document.getElementById(varoff).style.display = 'none';
+    document.getElementById(varon).style.display = 'block'
+    }
+} 
+	</script>
 </body>
 </html>
