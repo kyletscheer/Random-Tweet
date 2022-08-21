@@ -2,14 +2,18 @@
 </head>
 <body>
 <?php include 'nav.php'; ?>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
   <div class="container">
   <form action='index.php' method='post'>
   Keyword: <input type="text" name="keyword">
   <input type="submit">
   </form>
-  <button type="button"><a href="javascript:;" onmousedown="toggleDiv('mydiv');">Toggle Between Tweet Style Or Raw Data</a></button>
+  <br><br>
+  <button type="button" class="switcher">Toggle Between Tweet Style Or Raw Data</button>
 
-  <?
+  <?php
+  error_reporting(0);
+ini_set('display_errors', 0);
 	//check if keyword input has been filled out. If not, set to "random
 	if (!empty($_POST["keyword"])){
 		$inputkeyword = $_POST["keyword"];
@@ -17,14 +21,14 @@
 	else {
 	$inputkeyword = "random";
 	}
-	echo "<h5>The keyword is '" . $inputkeyword . "'.</h5>";
+	echo "<br><br><h5>The keyword is '" . $inputkeyword . "'.</h5>";
 	//define connection to Twitter API
 	require_once('TwitterAPIExchange.php');
 	/** Set access tokens here - see: https://dev.twitter.com/apps/ **/
-	$OAUTH_ACCESS_TOKEN = getenv('PLACE_OAUTH_ACCESS_TOKEN');
-	$OAUTH_ACCESS_TOKEN_SECRET = getenv('PLACE_OAUTH_ACCESS_TOKEN_SECRET');
-	$CONSUMER_TOKEN = getenv('PLACE_CONSUMER_TOKEN');
-	$CONSUMER_TOKEN_SECRET = getenv('PLACE_CONSUMER_TOKEN_SECRET');
+	$OAUTH_ACCESS_TOKEN = '769463491-e9Z80XPolJ8QprsqSAXhqWdfcZ2McHpbzjBB3pO1';
+	$OAUTH_ACCESS_TOKEN_SECRET = 'cHJauzfo6HQc9XCsU0hvkD58PYu879XLFCzr8G0qnWRu9';
+	$CONSUMER_TOKEN = 'gs3RIhkllY5zha7g3OcG1VJQJ';
+	$CONSUMER_TOKEN_SECRET ='6vTowFChGyMx5QAS6e4HksYcn82TqWLqscbuuqNIHTxt7UDrtQ';
 	$settings = array(
 		'oauth_access_token' => "$OAUTH_ACCESS_TOKEN",
 		'oauth_access_token_secret' => "$OAUTH_ACCESS_TOKEN_SECRET",
@@ -51,7 +55,7 @@
 	$i = 1;
 	//print out the tweet information
 	foreach($string['statuses'] as $tweets) {
-		echo "<div id='mydivraw' style='display:none'>";
+		echo "<div class='basic'>";
 		$time = $tweets['created_at'];
 		$id = $tweets['id'];
 		$source = $tweets['source'];
@@ -72,11 +76,11 @@
 		echo "<img src=\"".$profile_image."\" width=\"100px\" height=\"100px\" /><br />";
 		echo "<b>Followers: </b>". $followers ."<br />";
 		echo "<b>Following: </b>". $friends ."<br />";
-		echo "<b>Listed: </b>". $listed ."<br /><hr />";
-		echo "</div>";
-		echo "<div id='mydivstylized' style='display:block'>";
-		echo "<blockquote class=\"twitter-tweet\"><a href=\"https://twitter.com/" . $user . "/statuses/" . $id . "\"></a></blockquote>";
-		echo "</div>";
+		echo "<b>Listed: </b>". $listed ."<br /><hr /></div>";
+		echo "<div class='stylized'>";
+		echo "<blockquote class=\"twitter-tweet\" data-lang=\"en\"><a href=\"https://twitter.com/x/status/" . $id . "\"></a></blockquote>";
+		echo "<blockquote class=\"twitter-tweet\"> <a href=\"https://twitter.com/x/status/807811447862468608\"></a></blockquote>";
+		echo "jesus</div>";
 		$i++;
 		if($i == 2) break;  
 	}
@@ -86,27 +90,14 @@
 	echo "<button type='button' class='btn btn-primary' onClick='window.location.reload()'>Another Tweet</button>";
 	?>
 	<br><br><br><br><a href="https://kyletscheer.medium.com/getting-a-random-tweet-using-the-twitter-search-api-and-php-c7546c8fa080" target="_blank">How this was made.</a>
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
 	<script>
-function toggleDiv(divid)
-  {
- 
-    varon = divid + 'raw';
-    varoff = divid + 'stylized';
- 
-    if(document.getElementById(varon).style.display == 'block')
-    {
-    document.getElementById(varon).style.display = 'none';
-    document.getElementById(varoff).style.display = 'block';
-    }
-   
-    else
-    {  
-    document.getElementById(varoff).style.display = 'none';
-    document.getElementById(varon).style.display = 'block'
-    }
-} 
+		$('.basic').hide();
+		$('.switcher').click(function(){
+			$('.stylized,.basic').toggle();
+		});
 	</script>
+	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 </div>
 <?php include 'footer.php'; ?>
 </body>

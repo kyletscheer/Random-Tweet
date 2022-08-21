@@ -1,6 +1,5 @@
 <html>
 <head>
-<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 </head>
 <body>
   <form action='index.php' method='post'>
@@ -76,5 +75,6 @@
 	//display the button to get a new random tweet
 	echo "<button type='button' class='btn btn-primary' onClick='window.location.reload()'>Another Tweet</button>";
 	?>
+
 </body>
 </html>

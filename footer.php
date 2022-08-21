@@ -1,4 +1,4 @@
-<div style="height: 50px">
+<div style="height: 100px">
 </div>
 <footer class="bg-dark fixed-bottom" style="padding: 10px;">
     <div class="container">

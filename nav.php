@@ -4,3 +4,4 @@
       <a class="navbar-brand" href="index.php">Get a Random Tweet</a>
     </div>
   </nav>
+  <div style="height:50px"></div>
