@@ -1,8 +1,8 @@
-<html>
-<head>
-	<title>Get a Random Tweet</title>
+<?php include 'header.php'; ?>
 </head>
 <body>
+<?php include 'nav.php'; ?>
+  <div class="container">
   <form action='index.php' method='post'>
   Keyword: <input type="text" name="keyword">
   <input type="submit">
@@ -107,5 +107,7 @@ function toggleDiv(divid)
     }
 } 
 	</script>
+</div>
+<?php include 'footer.php'; ?>
 </body>
 </html>
