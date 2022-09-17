@@ -2,7 +2,6 @@
 </head>
 <body>
 <?php include 'nav.php'; ?>
-	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
   <div class="container">
   <form action='index.php' method='post'>
   Keyword: <input type="text" name="keyword">
@@ -78,9 +77,14 @@ ini_set('display_errors', 0);
 		echo "<b>Following: </b>". $friends ."<br />";
 		echo "<b>Listed: </b>". $listed ."<br /><hr /></div>";
 		echo "<div class='stylized'>";
-		echo "<blockquote class=\"twitter-tweet\" data-lang=\"en\"><a href=\"https://twitter.com/x/status/" . $id . "\"></a></blockquote>";
-		echo "<blockquote class=\"twitter-tweet\"> <a href=\"https://twitter.com/x/status/807811447862468608\"></a></blockquote>";
-		echo "jesus</div>";
+		?>
+		<blockquote class="twitter-tweet">
+  <a href="https://twitter.com/x/status/<?php echo $id?>"></a> 
+</blockquote>
+	<script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script> 
+
+		</div>
+		<?php
 		$i++;
 		if($i == 2) break;  
 	}
@@ -96,7 +100,6 @@ ini_set('display_errors', 0);
 			$('.stylized,.basic').toggle();
 		});
 	</script>
-	<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 </div>
 <?php include 'footer.php'; ?>
