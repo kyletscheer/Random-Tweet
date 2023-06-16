@@ -1,6 +1,6 @@
 # Random Tweet Generator
 
-*This may be outdated, I haven't tested it since the Twitter API became paid-only.
+*This may be outdated, I haven't tested it since the Twitter API became paid-only.*
 
 The Random Tweet Generator is a PHP script to get a random tweet based on a designated keyword or parameters.
 
